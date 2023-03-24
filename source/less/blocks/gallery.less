@@ -1,0 +1,92 @@
+.gallery__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__item {
+  position: relative;
+  width: 330px;
+  line-height: 0px;
+
+  &:hover > .gallery__item-info {
+    opacity: 1;
+  }
+}
+
+.gallery__item-info {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.gallery__item-author {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.gallery__item-author-avatar {
+  box-sizing: border-box;
+  line-height: 0;
+  border: 1px solid @white;
+  border-radius: 8px;
+  margin-bottom: 13px;
+}
+
+.gallery__item-author-name {
+  font-size: 30px;
+  line-height: 36px;
+  color: @white;
+}
+
+.gallery__item-author-nickname {
+  font-size: 18px;
+  line-height: 21px;
+  color: @white;
+}
+
+.gallery__item-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 182px;
+  pointer-events: none;
+
+  &:hover > .gallery__item-like-button:not(:hover),
+  &:hover > .gallery__item-open-button:not(:hover),
+  &:hover > .gallery__item-download-button:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+.gallery__item-like-button {
+  box-sizing: border-box;
+  color: @white;
+  line-height: 0;
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.gallery__item-open-button {
+  color: @white;
+  text-decoration: none;
+}
+
+.gallery__item-download-icon {
+  color: @white;
+  text-decoration: none;
+}

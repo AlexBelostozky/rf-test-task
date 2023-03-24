@@ -13,3 +13,7 @@ source/css/*.map
 Thumbs.db
 build
 .publish
+.editorconfig
+.stylelintrc
+.gitattributes
+.gitignore

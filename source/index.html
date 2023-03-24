@@ -32,12 +32,12 @@
 
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a class="header__nav-user-link" href="#">
-                <svg class="header__nav-user-icon" width="29" height="29" fill="currentColor">
+              <a class="header__nav-link" href="#">
+                <svg class="header__nav-icon" width="29" height="29" fill="currentColor">
                   <title>Избранное.</title>
                   <use href="img/icons/stack.svg#favourites-icon"></use>
                 </svg>
-                <span class="header__nav-user-title">Избранное</span>
+                <span class="header__nav-title">Избранное</span>
               </a>
             </li>
           </ul>
@@ -45,8 +45,58 @@
       </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="top">
+      <div class="main__container">
+          <section class="main__gallery gallery">
+            <h2 class="gallery__heading visually-hidden">Галерея изображений.</h2>
 
+            <ul class="gallery__list">
+              <li class="gallery__item">
+                <img class="gallery__item-image" src="img/prev-image.jpg" alt="" width="330">
+
+                <div class="gallery__item-info">
+                  <div class="gallery__item-author">
+                    <img class="gallery__item-author-avatar" src="" alt="" width="70" height="70">
+                    <span class="gallery__item-author-name">Vadim Sadovski</span>
+                    <span class="gallery__item-author-nickname">@vadimsadovski</span>
+                  </div>
+
+                  <div class="gallery__item-buttons">
+                    <button class="gallery__item-like-button gallery-item-button" type="button" name="like-button">
+                      <svg class="gallery__item-like-icon" width="34" height="34" fill="currentColor">
+                        <title>Добавить в избранное.</title>
+                        <use href="img/icons/stack.svg#like-icon"></use>
+                      </svg>
+                    </button>
+
+                    <a class="gallery__item-open-button gallery-item-button" href="#">
+                      <svg class="gallery__item-open-icon" width="34" height="34" fill="currentColor">
+                        <title>Открыть изображение.</title>
+                        <use href="img/icons/stack.svg#open-icon"></use>
+                      </svg>
+                    </a>
+
+                    <a class="gallery__item-download-button gallery-item-button" href="#" download>
+                      <svg class="gallery__item-download-icon" width="34" height="34" fill="currentColor">
+                        <title>Скачать изображение.</title>
+                        <use href="img/icons/stack.svg#download-icon"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+
+            </ul>
+          </section>
+      </div>
+
+      <a class="main__up-button" href="#top">
+        <svg class="main__up-button-icon" width="24" height="24" fill="currentColor">
+          <title>Наверх страницы.</title>
+          <use href="img/icons/stack.svg#go-up-icon"></use>
+        </svg>
+      </a>
     </main>
 
     <script src="./js/script.js" defer></script>
