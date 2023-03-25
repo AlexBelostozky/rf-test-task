@@ -1,15 +1,23 @@
 import {getData} from './api.js';
+import {createLayout} from './gallery-layout.js';
+import {renderItems} from './items.js';
 
-// getData(console.log);
 
-const masonryGridContainer = document.querySelector('.gallery__list');
-const masonryGridOptions = {
-  itemSelector: '.gallery__item-container',
-  // columnWidth: 476,
-  gutter: 27,
-  // fitWidth: true,
-  // columnWidth: 330,
-  // resize: true
+// getData((itemsData) => renderItems(itemsData));
+
+// function showItems () {
+//   return getData().then(renderItems)
+// }
+
+async function showItems() {
+  try {
+    const itemsData = await getData();
+    await renderItems(itemsData);
+    await createLayout();
+
+  } catch (err) {
+    console.log(err);
+  }
 }
 
-new Masonry(masonryGridContainer, masonryGridOptions);
+showItems();
