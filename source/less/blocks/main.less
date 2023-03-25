@@ -1,9 +1,19 @@
 .main {
   padding-top: @header-small-height;
+
+  @media (min-width: @desktop-width) {
+    padding-top: @header-large-height;
+  }
 }
 
 .main__container {
   padding: 30px 22px;
+  max-width: 1482px;
+  margin: 0 auto;
+
+  @media (min-width: @desktop-width) {
+    padding: 80px 40px;;
+  }
 }
 
 .main__up-button {

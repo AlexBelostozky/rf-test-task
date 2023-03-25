@@ -57,6 +57,7 @@
   "type": "module",
   "dependencies": {
     "gh-pages": "^5.0.0",
+    "masonry-layout": "^4.2.2",
     "swiper": "^9.0.5"
   }
 }

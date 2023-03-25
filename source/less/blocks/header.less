@@ -6,8 +6,10 @@
   left: 0;
   right: 0;
   background-color: @black;
+  z-index: 1;
 
   @media (min-width: @desktop-width) {
+    display: flex;
     min-height: @header-large-height;
   }
 }
@@ -23,46 +25,45 @@
   padding: 0;
   z-index: 1;
 
-  // @media (min-width: @desktop-width) {
-  //   padding: 0 40px;
-  // }
-}
-
-.header__logo-wrapper{
-  display: flex;
-
-  // @media (min-width: @desktop-width) {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   margin-right: 21px;
-  // }
+  @media (min-width: @desktop-width) {
+    max-width: 1482px;
+  }
 }
 
 .header__logo {
-  display: block;
+  display: flex;
   box-sizing: border-box;
   line-height: 0;
   color: @white;
   padding: 25px 22px;
+  text-decoration: none;
 
-  // @media (min-width: @desktop-width) {
-  //   margin-right: 20px;
-  // }
+  @media (min-width: @desktop-width) {
+    padding: 40px 40px;
+  }
 }
 
-.header__title {
-  display: none;
+.header__logo-icon {
+  @media (min-width: @desktop-width) {
+    margin-right: 24px;
+  }
+}
 
-  // @media (min-width: @desktop-width) {
-  //   display: block;
-  //   font-family: "SF-UI-Display", "Arial", sans-serif;
-  //   font-style: normal;
-  //   font-weight: 400;
-  //   font-size: 24px;
-  //   line-height: 29px;
-  //   min-width: 126px;
-  // }
+.header__logo-title {
+  display: none;
+  text-decoration: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    font-family: "SF-UI-Display", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    color: @white;
+    min-width: 126px;
+    margin: 0;
+  }
 }
 
 .header__nav {
@@ -94,11 +95,21 @@
   text-decoration: none;
   padding: 25px 22px;
 
-  // @media (min-width: @desktop-width) {
-  //   margin-right: 20px;
-  // }
+  @media (min-width: @desktop-width) {
+    padding: 40px 40px;
+  }
 }
 
 .header__nav-title {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.header__nav-icon {
+  @media (min-width: @desktop-width) {
+    margin-right: 10px;
+  }
 }
