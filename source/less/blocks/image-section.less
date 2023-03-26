@@ -224,23 +224,26 @@
   border-radius: 8px;
   line-height: 0px;
   font-size: 0;
+  width: inherit;
+
+  @media (min-width: @desktop-width) {
+    width: inherit;
+  }
 
   & source,
   & img {
     border-radius: inherit;
     line-height: inherit;
     font-size: inherit;
+    margin: 0 auto;
+    text-align: center;
 
     @media (min-width: @tablet-width + 44px) {
       width: @tablet-width;
     }
 
     @media (min-width: @desktop-width) {
-      width: 1044px;
-    }
-
-    @media (min-width: @wide-desktop-width) {
-      width: 1482px;
+      width: inherit;
     }
   }
 }
