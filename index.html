@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Imagestock</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preload" href="fonts/SF-UI-Display-Regular.woff" as="font">
+    <link rel="preload" href="fonts/SF-UI-Display-Semibold.woff" as="font">
+    <link rel="preload" href="fonts/SF-UI-Display-Bold.woff" as="font">
+  </head>
+
+  <body class="page__body">
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo" href="index.html">
+          <svg class="header__logo-icon" width="29" height="29" fill="currentColor">
+            <title>Логотип ImageStock.</title>
+            <use href="img/icons/stack.svg#imagestock-icon"></use>
+          </svg>
+
+          <h1 class="header__logo-title">ImageStock</h1>
+        </a>
+
+        <nav class="header__nav">
+          <h2 class="visually-hidden">Навигация.</h2>
+
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">
+                <svg class="header__nav-icon" width="29" height="29" fill="currentColor">
+                  <title>Избранное.</title>
+                  <use href="img/icons/stack.svg#favourites-icon"></use>
+                </svg>
+                <span class="header__nav-title">Избранное</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main" id="top">
+      <div class="main__container">
+          <section class="main__gallery gallery">
+            <h2 class="gallery__heading visually-hidden">Галерея изображений.</h2>
+
+            <ul class="gallery__list">
+              <!-- <li class="gallery__item-container">
+                <div class="gallery__item">
+
+                  <picture class="gallery__item-image">
+                    <source media="(min-width: 1280px)" srcset="img/prev-image.jpg 1x, img/prev-image@2x.jpg 2x" width="476">
+                    <img src="img/prev-image.jpg" srcset="img/prev-image@2x.jpg 2x" width="330" alt="">
+                  </picture>
+
+                  <div class="gallery__item-info">
+                    <div class="gallery__item-author">
+                      <img class="gallery__item-author-avatar" src="" alt="" width="70" height="70">
+                      <span class="gallery__item-author-name">Vadim Sadovski</span>
+                      <span class="gallery__item-author-nickname">@vadimsadovski</span>
+                    </div>
+
+                    <div class="gallery__item-buttons">
+                      <button class="gallery__item-like-button gallery-item-button" type="button" name="like-button">
+                        <svg class="gallery__item-like-icon" width="34" height="34" fill="currentColor">
+                          <title>Добавить в избранное.</title>
+                          <use href="img/icons/stack.svg#like-icon"></use>
+                        </svg>
+                      </button>
+
+                      <a class="gallery__item-open-button gallery-item-button" href="#">
+                        <svg class="gallery__item-open-icon" width="34" height="34" fill="currentColor">
+                          <title>Открыть изображение.</title>
+                          <use href="img/icons/stack.svg#open-icon"></use>
+                        </svg>
+                      </a>
+
+                      <a class="gallery__item-download-button gallery-item-button" href="#" download>
+                        <svg class="gallery__item-download-icon" width="34" height="34" fill="currentColor">
+                          <title>Скачать изображение.</title>
+                          <use href="img/icons/stack.svg#download-icon"></use>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </li> -->
+
+            </ul>
+          </section>
+      </div>
+
+      <a class="main__up-button" href="#top">
+        <svg class="main__up-button-icon" width="24" height="24" fill="currentColor">
+          <title>Наверх страницы.</title>
+          <use href="img/icons/stack.svg#go-up-icon"></use>
+        </svg>
+      </a>
+    </main>
+
+    <template id="gallery-item">
+      <li class="gallery__item-container">
+        <div class="gallery__item">
+          <picture class="gallery__item-image">
+            <source media="(min-width: 1920px)" srcset="img/prev-image4.jpg 1x, img/prev-image4@2x.jpg 2x" width="476" height="260">
+            <img src="img/prev-image4.jpg" srcset="img/prev-image4@2x.jpg 2x" width="330" height="260" alt="">
+          </picture>
+
+          <div class="gallery__item-info">
+            <div class="gallery__item-author">
+              <img class="gallery__item-author-avatar" src="" alt="" width="70" height="70">
+              <span class="gallery__item-author-name">Name Surname</span>
+              <span class="gallery__item-author-nickname">@nickname</span>
+            </div>
+
+            <div class="gallery__item-buttons">
+              <button class="gallery__item-like-button gallery-item-button" type="button" name="like-button">
+                <svg class="gallery__item-like-icon" width="34" height="34" fill="currentColor">
+                  <title>Добавить в избранное.</title>
+                  <use href="img/icons/stack.svg#like-icon"></use>
+                </svg>
+              </button>
+
+              <a class="gallery__item-open-button gallery-item-button" href="#">
+                <svg class="gallery__item-open-icon" width="34" height="34" fill="currentColor">
+                  <title>Открыть изображение.</title>
+                  <use href="img/icons/stack.svg#open-icon"></use>
+                </svg>
+              </a>
+
+              <a class="gallery__item-download-button gallery-item-button" href="#" download target="_blank">
+                <svg class="gallery__item-download-icon" width="34" height="34" fill="currentColor">
+                  <title>Скачать изображение.</title>
+                  <use href="img/icons/stack.svg#download-icon"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </li>
+    </template>
+
+    <script src="./js/masonry-layout/dist/masonry.pkgd.js"></script>
+    <script src="./js/script.js" type="module"></script>
+  </body>
+
+</html>
