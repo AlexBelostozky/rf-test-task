@@ -1,17 +1,15 @@
 import {getData} from './api.js';
 import {createLayout} from './gallery-layout.js';
 import {renderItems} from './items.js';
+import {galleryList} from './constants.js';
+import {DATA_URL} from './constants.js';
+import {openModalItemFull} from './modal-item-full.js'
 
-
-// getData((itemsData) => renderItems(itemsData));
-
-// getData().then(renderItems).then(createLayout).then(createLayout);
-
-
-async function showItems() {
+// Function for show items recieved from {dataSource} in {targetElement}
+async function showItems (dataSource, targetElement) {
   try {
-    const itemsData = await getData();
-    await renderItems(itemsData);
+    const itemsData = await getData(dataSource);
+    await renderItems(itemsData, targetElement);
     await createLayout();
 
   } catch (err) {
@@ -19,4 +17,22 @@ async function showItems() {
   }
 }
 
-showItems();
+// Set listeners to {targetGallrey}'s elements
+function setItemsListeners (targetGallrey) {
+  targetGallrey.addEventListener('click', onGalleryClick);
+}
+
+showItems(DATA_URL, galleryList)
+  .then(setItemsListeners(galleryList));
+
+function onGalleryClick (evt) {
+  if (evt.target.closest('.gallery__item-open-button')) {
+    evt.preventDefault();
+    openModalItemFull(evt);
+  }
+
+  if (evt.target.closest('.gallery__item-like-button')) {
+    evt.preventDefault();
+    console.log('like');
+  }
+}
