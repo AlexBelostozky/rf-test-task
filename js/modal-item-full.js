@@ -1,6 +1,7 @@
 import {modalItemFull} from './constants.js';
 import {body} from './constants.js';
 import {headerLogo} from './constants.js';
+import {DESKTOP_WIDTH} from './constants.js';
 
 function openModalItemFull (evt) {
   modalItemFull.classList.remove('modal-item-full--hide');
@@ -11,6 +12,7 @@ function openModalItemFull (evt) {
   headerLogo.addEventListener('click', onHeaderLogoModalClick);
 
   // Transfer data to modal
+  let modalImageContainer = modalItemFull.querySelector('.image-section__image-conainer');
   let modalAuthorAvatar = modalItemFull.querySelector('.image-section__author-avatar');
   let modalAuthorName = modalItemFull.querySelector('.image-section__author-name');
   let modalAuthorNickname = modalItemFull.querySelector('.image-section__author-nickname');
@@ -37,6 +39,16 @@ function openModalItemFull (evt) {
   modalWideDesktopImage.srcset = selectedWideDesktopImage.srcset;
   modalDownloadButton.href = selectedDownloadButton.href;
   modalImageSection.style.backgroundImage = `url(${selectedMobileImage.src})`;
+
+  let screenWidth = window.screen.width;
+  if (screenWidth >= DESKTOP_WIDTH) {
+    let maxImageHeight = 650;
+    let originalImageWidth = selectedItem.querySelector('.gallery__item-image').dataset.originalWidth;
+    let originalImageHeight = selectedItem.querySelector('.gallery__item-image').dataset.originalHeight;
+
+    let maxImageWidth = Math.floor(maxImageHeight / originalImageHeight * originalImageWidth);
+    modalImageContainer.style.width = `${maxImageWidth}px`;
+  }
 }
 
 function onModalEscKeydown (evt) {
