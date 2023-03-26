@@ -9,17 +9,13 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 979px;
+    width: 1044px;
   }
 
-  @media (min-width: 1562px) {
+  @media (min-width: @wide-desktop-width) {
     width: 1482px;
   }
 }
-
-// .gallery__item-container {
-//   min-height: 268px;
-// }
 
 .gallery__item {
   position: relative;
@@ -27,10 +23,6 @@
   line-height: 0px;
   border-radius: 8px;
   margin-bottom: 30px;
-
-  // @media (min-width: @desktop-width) {
-  //   min-height: @header-large-height;
-  // }
 
   &:hover > .gallery__item-info {
     opacity: 1;
@@ -64,6 +56,7 @@
   border-radius: inherit;
   opacity: 0;
   transition: opacity .2s ease-in-out;
+  padding: 20px;
 }
 
 .gallery__item-author {
@@ -85,12 +78,28 @@
   font-size: 30px;
   line-height: 36px;
   color: @white;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 290px;
+
+  @media (min-width: @wide-desktop-width) {
+    max-width: 456px;
+  }
 }
 
 .gallery__item-author-nickname {
   font-size: 18px;
   line-height: 21px;
   color: @white;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 290px;
+
+  @media (min-width: @wide-desktop-width) {
+    max-width: 456px;
+  }
 }
 
 .gallery__item-buttons {
