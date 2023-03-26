@@ -49,46 +49,6 @@
             <h2 class="gallery__heading visually-hidden">Галерея изображений.</h2>
 
             <ul class="gallery__list">
-              <!-- <li class="gallery__item-container">
-                <div class="gallery__item">
-
-                  <picture class="gallery__item-image">
-                    <source media="(min-width: 1280px)" srcset="img/prev-image.jpg 1x, img/prev-image@2x.jpg 2x" width="476">
-                    <img src="img/prev-image.jpg" srcset="img/prev-image@2x.jpg 2x" width="330" alt="">
-                  </picture>
-
-                  <div class="gallery__item-info">
-                    <div class="gallery__item-author">
-                      <img class="gallery__item-author-avatar" src="" alt="" width="70" height="70">
-                      <span class="gallery__item-author-name">Vadim Sadovski</span>
-                      <span class="gallery__item-author-nickname">@vadimsadovski</span>
-                    </div>
-
-                    <div class="gallery__item-buttons">
-                      <button class="gallery__item-like-button gallery-item-button" type="button" name="like-button">
-                        <svg class="gallery__item-like-icon" width="34" height="34" fill="currentColor">
-                          <title>Добавить в избранное.</title>
-                          <use href="img/icons/stack.svg#like-icon"></use>
-                        </svg>
-                      </button>
-
-                      <a class="gallery__item-open-button gallery-item-button" href="#">
-                        <svg class="gallery__item-open-icon" width="34" height="34" fill="currentColor">
-                          <title>Открыть изображение.</title>
-                          <use href="img/icons/stack.svg#open-icon"></use>
-                        </svg>
-                      </a>
-
-                      <a class="gallery__item-download-button gallery-item-button" href="#" download>
-                        <svg class="gallery__item-download-icon" width="34" height="34" fill="currentColor">
-                          <title>Скачать изображение.</title>
-                          <use href="img/icons/stack.svg#download-icon"></use>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </li> -->
 
             </ul>
           </section>
@@ -100,6 +60,63 @@
           <use href="img/icons/stack.svg#go-up-icon"></use>
         </svg>
       </a>
+
+      <!-- For modal show remove hide modificator -->
+      <div class="modal-item-full" id="modal-item-full-top">
+        <div class="modal-item-full__container">
+          <section class="modal-item-full__image-section image-section">
+            <div class="image-section__info">
+              <div class="image-section__author">
+                <img class="image-section__author-avatar" src="" alt="" width="48" height="48">
+
+                <div class="image-section__author-name-container">
+                  <span class="image-section__author-name">Name Surname</span>
+                  <span class="image-section__author-nickname">@nickname</span>
+                </div>
+              </div>
+
+              <div class="image-section__buttons">
+                <button class="image-section__like-button image-section-button" type="button" name="like-button">
+                  <svg class="image-section__like-icon" width="21" height="19" fill="currentColor">
+                    <title>Добавить в избранное.</title>
+                    <use href="img/icons/stack.svg#like-icon"></use>
+                  </svg>
+                </button>
+
+                <a class="image-section__download-button image-section-button" href="#" download target="_blank">
+                  <svg class="image-section__download-icon" width="28" height="28" fill="currentColor">
+                    <title>Скачать изображение.</title>
+                    <use href="img/icons/stack.svg#download-icon"></use>
+                  </svg>
+                  <spa class="image-section__download-label">Download</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="image-section__image-conainer">
+              <picture class="image-section__image">
+                <source media="(min-width: 1920px)" srcset="# 1x, # 2x" width="476" height="260">
+                <img src="img/image.jpg" srcset="img/image@2x.jpg 2x" width="330" alt="">
+              </picture>
+
+              <button class="image-section__image-fullscreen-button" type="button" name="fullscreen-button">
+                <svg class="image-section__image-fullscreen-icon" width="24" height="24" fill="currentColor">
+                  <title>Раскрыть на весь экран.</title>
+                  <use href="img/icons/stack.svg#image-fullscreen-icon"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+
+          <section class="modal-item-full__similar-gallery gallery">
+            <h2 class="gallery__heading">Похожие фотографии</h2>
+
+            <ul class="gallery__list">
+
+            </ul>
+          </section>
+        </div>
+      </div>
     </main>
 
     <template id="gallery-item">

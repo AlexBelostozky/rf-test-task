@@ -1,7 +1,7 @@
 import {getData} from './api.js';
 import {createLayout} from './gallery-layout.js';
 import {renderItems} from './items.js';
-
+import {galleryList} from './constants.js';
 
 // getData((itemsData) => renderItems(itemsData));
 
