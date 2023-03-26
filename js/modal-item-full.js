@@ -40,7 +40,8 @@ function openModalItemFull (evt) {
   modalDownloadButton.href = selectedDownloadButton.href;
   modalImageSection.style.backgroundImage = `url(${selectedMobileImage.src})`;
 
-  let screenWidth = window.screen.width;
+  let screenWidth = window.innerWidth;
+  console.log(screenWidth);
   if (screenWidth >= DESKTOP_WIDTH) {
     let maxImageHeight = 650;
     let originalImageWidth = selectedItem.querySelector('.gallery__item-image').dataset.originalWidth;
