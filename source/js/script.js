@@ -5,9 +5,8 @@ import {renderItems} from './items.js';
 
 // getData((itemsData) => renderItems(itemsData));
 
-// function showItems () {
-//   return getData().then(renderItems)
-// }
+// getData().then(renderItems).then(createLayout).then(createLayout);
+
 
 async function showItems() {
   try {
