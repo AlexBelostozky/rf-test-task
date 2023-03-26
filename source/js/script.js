@@ -2,16 +2,13 @@ import {getData} from './api.js';
 import {createLayout} from './gallery-layout.js';
 import {renderItems} from './items.js';
 import {galleryList} from './constants.js';
+import {DATA_URL} from './constants.js';
 
-// getData((itemsData) => renderItems(itemsData));
-
-// getData().then(renderItems).then(createLayout).then(createLayout);
-
-
-async function showItems() {
+// Function for show items recieved from {dataSource} in {targetElement}
+async function showItems(dataSource, targetElement) {
   try {
-    const itemsData = await getData();
-    await renderItems(itemsData);
+    const itemsData = await getData(dataSource);
+    await renderItems(itemsData, targetElement);
     await createLayout();
 
   } catch (err) {
@@ -19,4 +16,4 @@ async function showItems() {
   }
 }
 
-showItems();
+showItems(DATA_URL, galleryList);
