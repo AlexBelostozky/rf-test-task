@@ -9,6 +9,9 @@ const GALLERY_VERTICAL_GAP = 27;
 const galleryList = document.querySelector('.gallery__list');
 const galleryItemSelector = '.gallery__item-container';
 const itemTemplateElement = document.querySelector('#gallery-item').content.querySelector('.gallery__item-container');
+const modalItemFull = document.querySelector('.modal-item-full');
+const body = document.querySelector('.page__body');
+const headerLogo = document.querySelector('.header__logo');
 
 // EXPORT CONSTANTS //
 export {DATA_URL};
@@ -17,3 +20,6 @@ export {GALLERY_VERTICAL_GAP};
 export {galleryList};
 export {galleryItemSelector};
 export {itemTemplateElement};
+export {modalItemFull};
+export {body};
+export {headerLogo};

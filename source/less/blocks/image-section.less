@@ -1,19 +1,70 @@
+.image-section {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding-top: 43px;
+    padding-bottom: 105px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      backdrop-filter: blur(4px);
+      background-color: transparent;
+    }
+  }
+}
+
 .image-section__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 32px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+
+  @media (min-width: @desktop-width) {
+    width: 1044px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: @wide-desktop-width) {
+    width: 1482px;
+  }
 }
 
 .image-section__author {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  z-index: 1;
 }
 
 .image-section__author-avatar {
   border-radius: 8px;
   margin-right: 11px;
+  border: 1px solid @white;
+
+  @media (min-width: @desktop-width) {
+    width: 54px;
+    height: 54px;
+  }
 }
 
 .image-section__author-name-container {
@@ -28,7 +79,14 @@
   line-height: 21px;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 168px;
+  max-width: 160px;
+
+  @media (min-width: @desktop-width) {
+    color: #f2f2f2;
+    max-width: 720px;
+    font-size: 30px;
+    line-height: 35px;
+  }
 }
 
 .image-section__author-nickname {
@@ -38,12 +96,20 @@
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 168px;
+
+  @media (min-width: @desktop-width) {
+    color: #f2f2f2;
+    max-width: 720px;
+    font-size: 18px;
+    line-height: 21px;
+  }
 }
 
 .image-section__buttons {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 
 .image-section__like-button {
@@ -58,6 +124,11 @@
   margin-right: 17px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   transition: all .2s ease-in-out;
+
+  @media (min-width: @desktop-width) {
+    width: 50px;
+    height: 50px;
+  }
 
   &:hover,
   &:focus {
@@ -81,10 +152,17 @@
   padding: 4px;
   line-height: 0;
   color: @white;
+  text-decoration: none;
   background-color: #219653;
   border-radius: 8px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   transition: all .2s ease-in-out;
+
+  @media (min-width: @desktop-width) {
+    width: 206px;
+    height: 50px;
+    padding: 12px 41px;
+  }
 
   &:hover,
   &:focus {
@@ -104,16 +182,42 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+
+  @media (min-width: @desktop-width) {
+    left: 41px;
+  }
 }
 
 .image-section__download-label {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: right;
+  }
 }
 
 .image-section__image-conainer {
   position: relative;
   font-size: 0;
-line-height: 0;
+  line-height: 0;
+  width: 330px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width + 44px) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1044px;
+  }
+
+  @media (min-width: @wide-desktop-width) {
+    width: 1482px;
+  }
 }
 
 .image-section__image {
@@ -126,6 +230,18 @@ line-height: 0;
     border-radius: inherit;
     line-height: inherit;
     font-size: inherit;
+
+    @media (min-width: @tablet-width + 44px) {
+      width: @tablet-width;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 1044px;
+    }
+
+    @media (min-width: @wide-desktop-width) {
+      width: 1482px;
+    }
   }
 }
 
@@ -143,18 +259,14 @@ line-height: 0;
   color: @white;
   background-color: transparent;
   border: none;
-  border-radius: 8px;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
   transition: all .2s ease-in-out;
 
   &:hover,
   &:focus {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
   }
 
   &:active {
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     transform: scale(1);
     opacity: 0.5;
   }

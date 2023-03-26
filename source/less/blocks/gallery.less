@@ -2,9 +2,20 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 21px;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 26px;
   word-break: break-word;
+
+  @media (min-width: @desktop-width) {
+    font-size: 36px;
+    line-height: 43px;
+    width: 1044px;
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: @wide-desktop-width) {
+    width: 1482px;
+  }
 }
 
 .gallery__list {
@@ -38,7 +49,8 @@
     -webkit-touch-callout: none;
   }
 
-  &:hover > .gallery__item-info {
+  &:hover > .gallery__item-info,
+  &:active > .gallery__item-info {
     opacity: 1;
   }
 }

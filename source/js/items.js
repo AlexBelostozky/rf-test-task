@@ -22,12 +22,15 @@ async function renderItems (itemsData, targetElement) {
       newItem.querySelector('.gallery__item-author-avatar').src = user.profile_image.large;
       newItem.querySelector('.gallery__item-author-avatar').alt = `Аватар ${user.name}`;
       newItem.querySelector('.gallery__item-author-name').textContent = user.name;
-      newItem.querySelector('.gallery__item-author-nickname').textContent = user.username;
+      newItem.querySelector('.gallery__item-author-nickname').textContent = '@' + user.username;
 
       newItem.querySelector('.gallery__item-download-button').href = links.download;
 
       newItem.querySelector('.gallery__item-image').querySelector('img').height = Math.max(templateItemMobileWidth / width * height, templateItemMobileMinHeight);
       newItem.querySelector('.gallery__item-image').querySelector('source').height = Math.max(templateItemWideDesktopWidth / width * height, templateItemWideDesktopMinHeight);
+
+      newItem.querySelector('.gallery__item-image').dataset.originalWidth = width;
+      newItem.querySelector('.gallery__item-image').dataset.originalHeight = height;
 
       itemsBlankElement.append(newItem);
     });

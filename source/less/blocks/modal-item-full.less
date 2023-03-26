@@ -1,16 +1,42 @@
 .modal-item-full {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: @header-small-height;
   right: 0;
   bottom: 0;
   left: 0;
   display: block;
   background-color: @white;
-  padding: 120px 22px 80px;
+  padding: 40px 22px 80px;
+  overflow: auto;
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @wide-desktop-width) {
+    top: @header-large-height;
+  }
 }
 
 .modal-item-full--hide {
   display: none;
+}
+
+.modal-item-full__container {
+  width: 330px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width + 44px) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+  }
+
+  @media (min-width: @wide-desktop-width) {
+    width: auto;
+  }
 }
 
 .modal-item-full__image-section {
